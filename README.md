@@ -90,6 +90,7 @@ public class UserController : ApiController
 ```
 public class ParamsFilterAttribute : ActionFilterAttribute
 {
+    [Inject]
     public IUserService userService { get; set; }
     public override void OnActionExecuting(HttpActionContext actionContext)
     {
