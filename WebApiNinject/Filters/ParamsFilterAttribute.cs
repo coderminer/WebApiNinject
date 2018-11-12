@@ -1,3 +1,4 @@
+using Ninject;
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace WebApiNinject.Filters
 {
     public class ParamsFilterAttribute : ActionFilterAttribute
     {
+        [Inject]
         public IUserService userService { get; set; }
         public override void OnActionExecuting(HttpActionContext actionContext)
         {
